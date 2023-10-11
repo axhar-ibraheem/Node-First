@@ -2,6 +2,7 @@ const http = require("http");
 const PORT = 3000;
 const server = http.createServer((req, res) => {
   console.log(req.url, req.method, req.headers);
+
   if(req.url === "/home"){
     res.setHeader("Content-Type", "text/html");
     res.write("<html>");
@@ -31,7 +32,7 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log("Mohammad Azhar");
+  console.log(`server is running on port ${PORT}...`);
 });
 
 // const req = http.get("https://www.google.com", (res) => {
